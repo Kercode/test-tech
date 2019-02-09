@@ -1,7 +1,7 @@
 # Test technique
 
-Notre équipe de football vient de finir sa *Saison*, les *Score* de chaques match ressemble à ceci `hero:adversaire`.
-Le *Score* de chacun des match est enregistré dans un tableau:
+Notre équipe de football vient de finir sa *Saison*, le *Score* de chaque match ressemble à ceci `hero:adversaire`.
+Le *Score* est enregistré dans un tableau:
 
 Example: ["1:2", "2:3", ...]
 
