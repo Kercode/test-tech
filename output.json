@@ -2,14 +2,17 @@
   "seasons": [
     {
       "id": 1,
+      "period": "2015-2016",
       "points": 16
     },
     {
       "id": 2,
+      "period": "2016-2017",
       "points": 20
     },
     {
       "id": 3,
+      "period": "2017-2018",
       "points": 14
     }
   ]

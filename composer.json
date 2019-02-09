@@ -1,0 +1,12 @@
+{
+    "name": "kercode/test-tech",
+    "authors": [
+        {
+            "name": "Nicolas Le Chenic",
+            "email": "nicolaslechenic@gmail.com"
+        }
+    ],
+    "require": {
+        "phpunit/phpunit": "^7.5"
+    }
+}
