@@ -2,18 +2,27 @@
 
 class Score {
   public function __construct($stringScore) {
-    $this->stringScore = $stringScore;
+    $scores = explode(':', $stringScore);
+
+    $this->hero = $scores[0];
+    $this->opponent = $scores[1];
+  }
+
+  public function points() {
+    if ($this->hero > $this->opponent) {
+      return 3;
+    } elseif ($this->hero === $this->opponent) {
+      return 1;
+    } else {
+      return 0;
+    }
   }
 
   public function isValid() {
-    $scores = explode(':', $this->stringScore);
-    $hero = intval($scores[0]);
-    $opponent = intval($scores[1]);
-
     return
-      $hero >= 0 &&
-      $hero <= 4 &&
-      $opponent >= 0 &&
-      $opponent <= 4;
+      $this->hero >= 0 &&
+      $this->hero <= 4 &&
+      $this->opponent >= 0 &&
+      $this->opponent <= 4;
   }
 }
