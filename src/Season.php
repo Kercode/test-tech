@@ -1,6 +1,14 @@
 <?php
 
 class Season {
+  static public function getJSONSeason($id, $JSONSeasons) {
+    foreach($JSONSeasons as $JSONSeason) {
+      if($JSONSeason->id === $id) {
+        return $JSONSeason;
+      }
+    }
+  }
+
   public function __construct($arrayStringScore) {
     $this->arrayStringScore = $arrayStringScore;
   }
