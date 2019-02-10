@@ -27,6 +27,6 @@ foreach ($jsonData->scores as $score) {
   $i += 1;
 }
 
-  $output = fopen('output.json', 'w');
-  fwrite($output, json_encode(array("seasons" => $outputJson), JSON_PRETTY_PRINT));
-  fclose($output);
+$output = fopen('output.json', 'w');
+fwrite($output, json_encode(array("seasons" => $outputJson), JSON_PRETTY_PRINT));
+fclose($output);
