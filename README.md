@@ -9,9 +9,9 @@ Afin de remporter ce challenge, vous allez devoir faire un script qui permet d'u
 
 ## Règles
 
-- [ ] Si le score de hero > celui d'adversaire - +3 points
-- [ ] Si le score de hero = celui d'adversaire - +1 points
-- [ ] Si le score de hero < celui d'adversaire - 0 points
+- [x] Si le score de hero > celui d'adversaire - +3 points
+- [x] Si le score de hero = celui d'adversaire - +1 points
+- [x] Si le score de hero < celui d'adversaire - 0 points
 
 - [ ] Une saison comporte forcément 10 matches
 - [x] 0 <= score hero <= 4
