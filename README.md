@@ -13,7 +13,7 @@ Afin de remporter ce challenge, vous allez devoir faire un script qui permet d'u
 - [x] Si le score de hero = celui d'adversaire - +1 points
 - [x] Si le score de hero < celui d'adversaire - 0 points
 
-- [ ] Une saison comporte forcément 10 matches
+- [x] Une saison comporte forcément 10 matches
 - [x] 0 <= score hero <= 4
 - [x] 0 <= score adversaire <= 4
 
