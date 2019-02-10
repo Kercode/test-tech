@@ -9,6 +9,10 @@ class Score {
   }
 
   public function points() {
+    if(!$this->isValid()) {
+      throw new Exception("Invalid score");
+    }
+
     if ($this->hero > $this->opponent) {
       return 3;
     } elseif ($this->hero === $this->opponent) {
@@ -18,7 +22,7 @@ class Score {
     }
   }
 
-  public function isValid() {
+  private function isValid() {
     return
       $this->hero >= 0 &&
       $this->hero <= 4 &&

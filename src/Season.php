@@ -6,6 +6,10 @@ class Season {
   }
 
   public function total() {
+    if(!$this->hasValidNumberOfMatches()) {
+      throw new Exception("Invalid number of scores");
+    }
+
     $total = 0;
 
     foreach($this->arrayStringScore as $stringScore) {
@@ -17,7 +21,7 @@ class Season {
     return $total;
   }
 
-  public function hasValidNumberOfMatches() {
+  private function hasValidNumberOfMatches() {
     if (count($this->arrayStringScore) === 10) {
       return true;
     } else {
