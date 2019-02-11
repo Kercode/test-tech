@@ -6,25 +6,22 @@ require('./src/Season.php');
 $data = file_get_contents('data.json');
 $jsonData = json_decode($data);
 $outputJson = [];
-$i = 1;
 
-foreach ($jsonData->scores as $score) {
-  $seasonData = Season::getJSONSeason(
-    $score->season_id,
-    $jsonData->seasons
+foreach ($jsonData->seasons as $season) {
+  $season = new Season(
+    $season->id,
+    $season->period,
+    $season->scores
   );
-  $season = new Season($score->matches);
 
   array_push(
     $outputJson,
     array(
-      "id" => $i,
-      "period" => $seasonData->period,
+      "id" => $season->id,
+      "period" => $season->period,
       "points" => $season->total()
     )
   );
-
-  $i += 1;
 }
 
 $output = fopen('output.json', 'w');

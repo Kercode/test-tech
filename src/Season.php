@@ -1,16 +1,10 @@
 <?php
 
 class Season {
-  static public function getJSONSeason($id, $JSONSeasons) {
-    foreach($JSONSeasons as $JSONSeason) {
-      if($JSONSeason->id === $id) {
-        return $JSONSeason;
-      }
-    }
-  }
-
-  public function __construct($arrayStringScore) {
-    $this->arrayStringScore = $arrayStringScore;
+  public function __construct($id, $period, $arrayStringScores) {
+    $this->id = $id;
+    $this->period = $period;
+    $this->arrayStringScores = $arrayStringScores;
   }
 
   public function total() {
@@ -20,7 +14,7 @@ class Season {
 
     $total = 0;
 
-    foreach($this->arrayStringScore as $stringScore) {
+    foreach($this->arrayStringScores as $stringScore) {
       $score = new Score($stringScore);
 
       $total += $score->points();
@@ -30,7 +24,7 @@ class Season {
   }
 
   private function hasValidNumberOfMatches() {
-    if (count($this->arrayStringScore) === 10) {
+    if (count($this->arrayStringScores) === 10) {
       return true;
     } else {
       return false;

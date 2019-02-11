@@ -1,11 +1,11 @@
 <?php
 
 class Score {
-  public function __construct($stringScore) {
-    $scores = explode(':', $stringScore);
+  public function __construct($stringMatch) {
+    $results = explode(':', $stringMatch);
 
-    $this->hero = $scores[0];
-    $this->opponent = $scores[1];
+    $this->hero = $results[0];
+    $this->opponent = $results[1];
   }
 
   public function points() {
